@@ -1,7 +1,7 @@
 services:
   mnamer:
     build:
-        context: .
+        context: ./
         dockerfile: Dockerfile
     volumes:
         - docker-plex_movies:/data/movies

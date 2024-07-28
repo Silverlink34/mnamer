@@ -1,5 +1,6 @@
 services:
   mnamer:
+    tty: true
     image: python:alpine
     volumes:
         - docker-plex_movies:/data/movies

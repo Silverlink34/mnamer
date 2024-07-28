@@ -3,7 +3,7 @@ services:
     build:
        context: .
        dockerfile: Dockerfile
-    image: jkwill87/mnamer
+    image: python:alpine
     volumes:
         - docker-plex_movies:/data/movies
         - docker-plex_tvseries:/data/tvseries

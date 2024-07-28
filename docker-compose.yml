@@ -1,7 +1,7 @@
 services:
   mnamer:
     build:
-        context: ./
+        context: .
         dockerfile: Dockerfile
     image: jkwill87/mnamer
     volumes:

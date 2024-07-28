@@ -1,12 +1,9 @@
 services:
   mnamer:
-    build:
-       context: .
-       dockerfile: Dockerfile
     image: python:alpine
     volumes:
         - docker-plex_movies:/data/movies
-        - docker-plex_tvseries:/data/tvseries
+        - docker-plex_tvseries:/mnt
         - docker-plex_anime:/data/anime
         - docker-plex_kids:/data/kids
         - docker-plex_allison:/data/allison

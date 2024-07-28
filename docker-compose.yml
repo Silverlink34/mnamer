@@ -9,11 +9,11 @@ services:
         - docker-plex_allison:/data/allison
         - docker-plex_library:/data/music
         - docker-prowlarr_downloads:/data/downloads
-      environment:
-        - PUID=1000
-        - PGID=1000
-        - TZ=America/New_York
-      restart: always
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/New_York
+    restart: always
 
 volumes:
   docker-plex_movies:

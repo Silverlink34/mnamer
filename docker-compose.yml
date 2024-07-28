@@ -1,8 +1,8 @@
 services:
   mnamer:
     build:
-        context: .
-        dockerfile: Dockerfile
+       context: .
+       dockerfile: Dockerfile
     image: jkwill87/mnamer
     volumes:
         - docker-plex_movies:/data/movies
@@ -10,13 +10,8 @@ services:
         - docker-plex_anime:/data/anime
         - docker-plex_kids:/data/kids
         - docker-plex_allison:/data/allison
-        - docker-kavita_abookshelf_audiobooks:/data/audiobooks
-        - "C:/Users/brand/Calibre Library:/data/ebooks"
         - docker-plex_library:/data/music
         - docker-prowlarr_downloads:/data/downloads
-        - docker-prowlarr_scriptbox_root:/data/scriptbox
-        - brandons-ssh-server_openssh_config:/data/openssh_config
-        - brandons-ssh-server_openssh_pubkeys:/data/openssh_pubkeys
       environment:
         - PUID=1000
         - PGID=1000
@@ -24,8 +19,6 @@ services:
       restart: always
 
 volumes:
-  docker-fileman_fileman_config:
-    external: true
   docker-plex_movies:
     external: true
   docker-plex_tvseries:
@@ -36,15 +29,7 @@ volumes:
     external: true
   docker-plex_allison:
     external: true
-  docker-kavita_abookshelf_audiobooks:
-    external: true
   docker-plex_library:
     external: true
   docker-prowlarr_downloads:
-    external: true
-  docker-prowlarr_scriptbox_root:
-    external: true
-  brandons-ssh-server_openssh_config:
-    external: true
-  brandons-ssh-server_openssh_pubkeys:
     external: true

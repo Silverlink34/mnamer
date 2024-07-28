@@ -2,6 +2,9 @@ services:
   mnamer:
     tty: true
     image: python:alpine
+    build:
+        context: ./
+        dockerfile: Dockerfile
     volumes:
         - docker-plex_movies:/data/movies
         - docker-plex_tvseries:/mnt

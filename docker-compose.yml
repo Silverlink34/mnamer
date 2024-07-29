@@ -1,7 +1,7 @@
 services:
   mnamer:
     tty: true
-    build: .
+    build: ./
     volumes:
         - docker-plex_movies:/data/movies
         - docker-plex_tvseries:/mnt

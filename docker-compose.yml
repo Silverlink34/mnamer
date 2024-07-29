@@ -1,10 +1,7 @@
 services:
   mnamer:
     tty: true
-    image: jkwill87/mnamer
-    build:
-        context: ./
-        dockerfile: Dockerfile
+    build: .
     volumes:
         - docker-plex_movies:/data/movies
         - docker-plex_tvseries:/mnt

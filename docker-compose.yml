@@ -1,8 +1,6 @@
 services:
   mnamer:
-    build: 
-      context: .
-      dockerfile: Dockerfile
+    image: silverlink34/mnamer:mnamer
     tty: true
     volumes:
         - docker-plex_movies:/data/movies
